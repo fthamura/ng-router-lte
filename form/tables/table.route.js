@@ -5,13 +5,12 @@
 	angular.module('myApp').config(allRoute);
 
 	function allRoute($stateProvider) {
-		$stateProvider.state('table-example', {
-				url: '/form/master/single/new',
-				templateUrl: 'form/master/single/new.html'
+		$stateProvider.state('tables-simple', {
+				url: '/form/tables/simple',
+				templateUrl: 'form/tables/simple.html'
 		})
-			.state('form-single-search', {
-				url: '/form/master/single/search',
-				templateUrl: 'form/master/single/search.html'
-	});
+			.state('tables-data', {
+				url: '/form/tables/data',
+				templateUrl: 'form/tables/data.html'	});
 	}
 })();
