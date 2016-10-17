@@ -49,29 +49,48 @@
 							</tr>
 						</thead>
 						<tbody>
-							<!-- ngRepeat: location in ctrl.locations --><tr ng-repeat="location in ctrl.locations" class="ng-scope">
-								<td><a href="/admin/locations/00000157d0fc6b53cd7aab9b00000000" ui-sref="app.admin.locationEdit({id: location.id})"><span ng-bind="location.name" class="ng-binding">JAWA TIMUR</span></a></td>
-								<td ng-bind="location.description" class="ng-binding"></td>
+							<tr class="ng-scope">
 								<td>
-									<a ui-sref="app.admin.locationSub({id: location.id})" class="btn btn-primary btn-xs" title="admin.location.label.sub" href="/admin/locations/00000157d0fc6b53cd7aab9b00000000/subs">
+									<a ui-sref="form-single-new">JAWA TIMUR</a>
+								</td>
+								<td>Provinsi Jawa Timur</td>
+								<td>
+									<a class="btn btn-primary btn-xs">
 										<span class="fa fa-list"></span>
 									</a>
-									<a href="" class="btn btn-danger btn-xs" ng-click="ctrl.remove(location)" title="Delete ">
+									<a class="btn btn-danger btn-xs">
 										<span class="fa fa-trash"></span>
 									</a>
 								</td>
-							</tr><!-- end ngRepeat: location in ctrl.locations --><tr ng-repeat="location in ctrl.locations" class="ng-scope">
-								<td><a href="/admin/locations/00000157d0fc7ee9cd7aab9b00000000" ui-sref="app.admin.locationEdit({id: location.id})"><span ng-bind="location.name" class="ng-binding">DKI JAKARTA</span></a></td>
-								<td ng-bind="location.description" class="ng-binding"></td>
+							</tr>
+							<tr class="ng-scope">
 								<td>
-									<a ui-sref="app.admin.locationSub({id: location.id})" class="btn btn-primary btn-xs" title="admin.location.label.sub" href="/admin/locations/00000157d0fc7ee9cd7aab9b00000000/subs">
+									<a ui-sref="form-single-new">JAWA TIMUR</a>
+								</td>
+								<td>Provinsi Jawa Timur</td>
+								<td>
+									<a class="btn btn-primary btn-xs">
 										<span class="fa fa-list"></span>
 									</a>
-									<a href="" class="btn btn-danger btn-xs" ng-click="ctrl.remove(location)" title="Delete ">
+									<a class="btn btn-danger btn-xs">
 										<span class="fa fa-trash"></span>
 									</a>
 								</td>
-							</tr><!-- end ngRepeat: location in ctrl.locations -->
+							</tr>
+							<tr class="ng-scope">
+								<td>
+									<a ui-sref="form-single-new">JAWA TIMUR</a>
+								</td>
+								<td>Provinsi Jawa Timur</td>
+								<td>
+									<a class="btn btn-primary btn-xs">
+										<span class="fa fa-list"></span>
+									</a>
+									<a class="btn btn-danger btn-xs">
+										<span class="fa fa-trash"></span>
+									</a>
+								</td>
+							</tr>
 						</tbody>
 					</table>
 				</div>
