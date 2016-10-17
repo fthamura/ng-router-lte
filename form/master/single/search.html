@@ -1,0 +1,92 @@
+
+	<section class="content-header">
+      <h1>
+        Data Tables
+        <small>advanced tables</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">Tables</a></li>
+        <li class="active">Data tables</li>
+      </ol>
+    </section>
+	<!-- uiView: --><section class="content ng-scope" ui-view=""><div class="row ng-scope">
+	<div class="col-md-12">
+		<div class="box box-primary">
+			<div class="box-header with-border">
+				<div class="row">
+					<div class="col-md-6 col-xs-12 padding-top-5px">
+						<button type="button" class="btn btn-primary col-md-3 col-xs-12 ng-binding" ui-sref="form-single-new" href="/admin/locations/+">
+							<span class="fa fa-plus"></span> Add Location
+						</button>
+					</div>
+					<div class="col-md-6 col-xs-12 padding-top-5px">
+						<form ng-submit="ctrl.searchParams.page=1;ctrl.search();" class="ng-pristine ng-valid">
+							<div class="input-group">
+								<input type="text" ng-model="ctrl.searchParams.q" placeholder="Search..." class="form-control ng-pristine ng-untouched ng-valid ng-empty" autofocus="">
+								<span class="input-group-btn">
+									<button type="submit" class="btn btn-primary ng-binding">
+										<span class="fa fa-search"></span>
+										Search
+									</button>
+								</span>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="box-body">
+				<br>
+				<div class="table-responsive">
+					<table class="table table-hover">
+						<thead>
+							<tr>
+								<th translate="admin.location.label.name" class="ng-scope">Name</th>
+								<th translate="admin.location.label.description" class="ng-scope">Description</th>
+								<th translate="admin.location.label.action" class="ng-scope">Action</th>
+							</tr>
+						</thead>
+						<tbody>
+							<!-- ngRepeat: location in ctrl.locations --><tr ng-repeat="location in ctrl.locations" class="ng-scope">
+								<td><a href="/admin/locations/00000157d0fc6b53cd7aab9b00000000" ui-sref="app.admin.locationEdit({id: location.id})"><span ng-bind="location.name" class="ng-binding">JAWA TIMUR</span></a></td>
+								<td ng-bind="location.description" class="ng-binding"></td>
+								<td>
+									<a ui-sref="app.admin.locationSub({id: location.id})" class="btn btn-primary btn-xs" title="admin.location.label.sub" href="/admin/locations/00000157d0fc6b53cd7aab9b00000000/subs">
+										<span class="fa fa-list"></span>
+									</a>
+									<a href="" class="btn btn-danger btn-xs" ng-click="ctrl.remove(location)" title="Delete ">
+										<span class="fa fa-trash"></span>
+									</a>
+								</td>
+							</tr><!-- end ngRepeat: location in ctrl.locations --><tr ng-repeat="location in ctrl.locations" class="ng-scope">
+								<td><a href="/admin/locations/00000157d0fc7ee9cd7aab9b00000000" ui-sref="app.admin.locationEdit({id: location.id})"><span ng-bind="location.name" class="ng-binding">DKI JAKARTA</span></a></td>
+								<td ng-bind="location.description" class="ng-binding"></td>
+								<td>
+									<a ui-sref="app.admin.locationSub({id: location.id})" class="btn btn-primary btn-xs" title="admin.location.label.sub" href="/admin/locations/00000157d0fc7ee9cd7aab9b00000000/subs">
+										<span class="fa fa-list"></span>
+									</a>
+									<a href="" class="btn btn-danger btn-xs" ng-click="ctrl.remove(location)" title="Delete ">
+										<span class="fa fa-trash"></span>
+									</a>
+								</td>
+							</tr><!-- end ngRepeat: location in ctrl.locations -->
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="box-footer">
+				<div class="row">
+					<div class="col-md-6">
+						<ul class="pagination ng-isolate-scope ng-not-empty ng-valid" total-items="ctrl.locations.meta.totalElements" ng-model="ctrl.page" items-per-page="ctrl.locations.meta.size" ng-change="ctrl.search()">
+						</ul>
+					</div>
+					<div class="col-md-6">
+						<div class="pagination alert pull-right ng-scope" translate="admin.location.label.total_entries" translate-values="{total: ctrl.locations.meta.totalElements}">Found 2 locations</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</section>
